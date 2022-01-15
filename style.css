@@ -1,0 +1,328 @@
+:root {
+    --blue: #1DA1F2;
+    --black: #14171A;
+    --dark-gray: #657786;
+    --light-gray: #AAB8C2;
+    --x-light-gray: #E1E8ED;
+    --xx-light-gray: #F5F8FA;
+    --light: #F5F8FA;
+    --white: #fff;
+}
+
+/* text colors */
+.text-blue {
+    color: var(--blue);
+}
+
+.text-black {
+    color: var(--black);
+}
+
+.text-dark-gray {
+    color: var(--dark-gray);
+}
+
+.text-light-gray {
+    color: var(--light-gray);
+}
+
+.text-x-light-gray {
+    color: var(--x-light-gray);
+}
+
+.text-xx-light-gray {
+    color: var(--xx-light-gray);
+}
+
+.text-light {
+    color: var(--light);
+}
+
+/* background colors */
+.bg-blue {
+    background-color: var(--blue);
+}
+
+.bg-black {
+    background-color: var(--black);
+}
+
+.bg-dark-gray {
+    background-color: var(--dark-gray);
+}
+
+.bg-light-gray {
+    background-color: var(--light-gray);
+}
+
+.bg-x-light-gray {
+    background-color: var(--x-light-gray);
+}
+
+.bg-xx-light-gray {
+    background-color: var(--xx-light-gray);
+}
+
+.bg-light {
+    background-color: var(--light);
+}
+
+
+/* container */
+.container {
+    max-width: 1230px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.text-center{
+    text-align: center;
+}
+
+/* Normalize */
+html {
+    overflow-y: scroll;
+    font-family: 'Raleway', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+/* Thin Scrollbar */
+:root {
+    scrollbar-color: rgb(210, 210, 210) rgb(46, 54, 69) !important;
+    scrollbar-width: thin !important;
+}
+
+body {
+    scrollbar-width: thin;
+    background-color: var(--black);
+}
+
+/* Main Starts */
+
+.main-wrapper {
+    display: grid;
+    grid-template-columns: repeat(11, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+}
+
+.left {
+    grid-column: span 6;
+}
+
+.right {
+    grid-column: span 5;
+}
+.left {
+    position: relative;
+    z-index: 1;
+    grid-column: span 6;
+}
+
+.left-content {
+    height: 100%;
+}
+
+.left-content .bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -2;
+}
+
+.left-content .bg-img::after {
+    content: '';
+    background-image: url(./images/bg-img.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    background-size: cover;
+}
+
+
+.left-content .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+}
+
+.left-content .logo i {
+    font-size: 20rem;
+    color: #fff;
+}
+
+.right {
+    min-height: 45vh;
+    padding: 2.8rem 0 2.8rem 2.8rem;
+    grid-column: span 5;
+}
+
+.right-content .header-logo {
+    margin-bottom: 3rem;
+}
+
+.right-content .header-logo i {
+    font-size: 2.5rem;
+}
+
+.right-content-title {
+    font-size: 4.2rem;
+    font-weight: 800;
+    margin-bottom: 2.6rem;
+}
+
+.right-content-subtitle {
+    font-size: 2.4rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.sign-up-options {
+    max-width: 300px;
+}
+
+.sign-up-options>div {
+    margin-bottom: 0.5rem;
+}
+
+.sign-up-option {
+    text-align: center;
+    border-radius: 3rem;
+    transition: background-color 0.4s;
+}
+
+.sign-up-option:hover {
+    background-color: rgba(255, 255, 255, 0.815);
+}
+
+.sign-up-option.with-phone-email:hover {
+    background-color: #1494e4ee;
+}
+
+.sign-up-option a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0.2rem;
+    text-decoration: none;
+}
+
+.sign-up-option svg {
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 6px;
+}
+
+.sign-up-option.with-apple a,
+.sign-up-option.with-phone-email a {
+    font-weight: bold;
+}
+
+.sign-up-options .or {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-options .or span {
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-up-options .or span:before,
+.sign-up-options .or span:after {
+    content: '';
+    display: inline-block;
+    height: 0.8px;
+    width: 130px;
+    background-color: var(--white);
+}
+
+.sign-up-options .or span:before {
+    margin-right: 6px;
+}
+
+.sign-up-options .or span:after {
+    margin-left: 6px;
+}
+
+.right .terms p,
+.right .terms {
+    margin-bottom: 2rem;
+}
+
+.right .terms p,
+.right .terms p a {
+    font-size: 10px;
+}
+
+.sign-in-wrapper {
+    max-width: 300px;
+}
+
+.sign-in-wrapper h4 {
+    margin-bottom: 1.6rem;
+}
+
+.btn {
+    display: inline-block;
+}
+
+.sign-in-wrapper .sign-in-btn {
+    background-color: transparent;
+    outline: 0.5px light var(--light);
+    width: 100%;
+    font-size: 0.9rem;
+    line-height: 2rem;
+    padding: 0.2rem;
+    border-radius: 3rem;
+}
+
+
+.main-footer {
+    margin-top: 1rem;
+    position: relative;
+    align-self: center;
+    padding: 1rem;
+}
+
+.main-footer .useful-links li{
+    display: inline-block;
+}
+
+.main-footer .useful-links li a{
+    font-size: 12px;
+    color: var(--light-gray);
+    padding: 0 0.3rem;
+    transition: 0.4s ease-in;
+}
+
+.main-footer .useful-links li a:hover{
+    text-decoration: underline;
+}
+
+.main-footer .copyright p{
+    margin-top: 0.5rem;
+    font-size: 12px;
+    font-weight: bold;
+}
